@@ -12,7 +12,7 @@ public class writeBuffer {
             writer.write("102,Bruce,DC\n");
             writer.write("106,Flash,JL\n");
         }
-        try(BufferedReader reader = new BufferedReader(new FileReader(file))){
+        try(BufferedReader reader = new BufferedReader(new FileReader(file))){ 
             String line;
             while ((line = reader.readLine())!= null){
                 String[] row = line.split(",");
