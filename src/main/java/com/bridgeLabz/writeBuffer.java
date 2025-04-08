@@ -3,7 +3,7 @@ package com.bridgeLabz;
 import java.io.*;
 
 public class writeBuffer {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String file = "C:\\Users\\Piyush\\OneDrive\\Desktop\\bridgelabz-workspace\\JAVA_IO\\CSV-data\\src\\main\\java\\com\\bridgeLabz\\output.csv";
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))){
             writer.write("ID,Name,Department\n");
@@ -11,6 +11,8 @@ public class writeBuffer {
             writer.write("104,Mark,Viltromite\n");
             writer.write("102,Bruce,DC\n");
             writer.write("106,Flash,JL\n");
+        }catch (Exception e){
+            e.printStackTrace();
         }
         try(BufferedReader reader = new BufferedReader(new FileReader(file))){ 
             String line;
@@ -21,6 +23,8 @@ public class writeBuffer {
                 }
                 System.out.println();
             }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
