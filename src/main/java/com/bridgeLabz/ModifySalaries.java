@@ -3,7 +3,7 @@ package com.bridgeLabz;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 
-import java.io.FileReader;
+import java.io.FileReader; 
 import java.io.FileWriter;
 
 public class ModifySalaries {
