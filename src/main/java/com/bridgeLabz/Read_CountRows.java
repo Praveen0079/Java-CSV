@@ -9,7 +9,7 @@ public class Read_CountRows {
         String file = "C:\\Users\\Piyush\\OneDrive\\Desktop\\bridgelabz-workspace\\JAVA_IO\\CSV-data\\src\\main\\java\\com\\bridgeLabz\\book1.csv";
         try(CSVReader reader = new CSVReader(new FileReader(file))) {
             String[] line;
-            int count =-1;
+            int count =-1; 
             while ((line = reader.readNext())!= null){
                 System.out.println(line[0]+"  "+line[1]);
                 count++;
