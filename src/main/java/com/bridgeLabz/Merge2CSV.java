@@ -2,9 +2,6 @@ package com.bridgeLabz;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-import com.opencsv.exceptions.CsvValidationException;
-import org.apache.commons.text.translate.CsvTranslators;
-
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -31,7 +28,7 @@ public class Merge2CSV {
         }
         try(CSVReader reader = new CSVReader(new FileReader(file2));
             CSVWriter writer = new CSVWriter(new FileWriter(merged))) {
-            String[] header = {"ID","Name","Marks","Age","Grades"}; //custom header
+            String[] header = {"ID","Name","Age","Marks","Grades"}; //custom header
             String[] Line;
             Line = reader.readNext(); //skipping header again
             writer.writeNext(header);
@@ -42,7 +39,7 @@ public class Merge2CSV {
 
                 if(studentInfo.containsKey(id)){
                     String[] info = studentInfo.get(id);
-                        writer.writeNext(new String[]{id,info[0],info[1],age,grade});
+                        writer.writeNext(new String[]{id,info[0],age,info[1],grade});
                 }
             }
         }
