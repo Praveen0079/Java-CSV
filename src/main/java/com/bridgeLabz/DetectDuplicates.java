@@ -19,7 +19,7 @@ public class DetectDuplicates {
             while ((line = reader.readNext()) != null) {
                 String id = line[0];
 
-                if (!uniqueIds.add(id)) { // this only adds unique IDs and if user id exists We can enter this statement
+                if (!uniqueIds.add(id)) { // this only adds unique IDs and if user id exists We can enter this if statement
 
                     duplicateRecords.add(line);
                 }
