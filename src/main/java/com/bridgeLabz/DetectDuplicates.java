@@ -28,12 +28,13 @@ public class DetectDuplicates {
             if (duplicateRecords.isEmpty()) {
                 System.out.println("No duplicate records found.");
             } else {
-                System.out.println(" Duplicate records found:\n");
+                System.out.println(" Duplicate records found:");
                 System.out.printf("%-5s %-15s %-15s %-10s%n", header[0], header[1], header[2], header[3]);
-
+//                System.out.println(Arrays.toString(header));
 
                 for (String[] record : duplicateRecords) {
                     System.out.printf("%-5s %-15s %-15s %-10s%n", record[0], record[1], record[2], record[3]);
+//                    System.out.println(Arrays.toString(record));
                 }
             }
 
