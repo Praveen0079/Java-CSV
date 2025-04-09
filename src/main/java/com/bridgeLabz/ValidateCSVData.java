@@ -14,11 +14,11 @@ public class ValidateCSVData {
             String[] header = reader.readNext();
             while ((line=reader.readNext())!=null){
                 if((!line[1].matches(regexMail)) && !(line[2].matches(regexNumber))){
-                    System.out.println(line[0]+" : Incorrect Mail and Number");
+                    System.out.printf("%-15s\n",line[0]+" : Incorrect Mail and Number");
                 } else if (!line[1].matches(regexMail)) {
-                    System.out.println(line[0]+" : Incorrect Mail");
+                    System.out.printf("%-15s\n",line[0]+" : Incorrect Mail");
                 } else if (line[2].matches(regexNumber)) {
-                    System.out.println(line[0]+" : Incorrect Number");
+                    System.out.printf("%-15s \n",line[0]+" : Incorrect Number");
                 }
             }
         }
